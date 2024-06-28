@@ -28,6 +28,7 @@ REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
 nginx         latest    e0c9858e10ed   7 days ago      188MB
 hello-world   latest    d2c94e258dcb   14 months ago   13.3kB
 ```
+
 其中每个字段含义如下
 |字段|含义|
 |:---:|:---:|
@@ -36,6 +37,7 @@ hello-world   latest    d2c94e258dcb   14 months ago   13.3kB
 |IMAGE ID|镜像的ID,唯一标识符|
 |CREATED|镜像创建的时间|
 |SIZE|镜像占用的磁盘空间大小|
+
 3. **删除镜像**
 
 使用以下命令删除本地镜像
@@ -121,6 +123,7 @@ c13a973494d0   ubuntu:latest   "/bin/bash"              2 hours ago     Up 29 mi
 |NAMES|容器的名称，如果没有设置则是随机分配|
 
 该命令`docker ps`后面可跟选项，常用有以下选项
+
 |选项|作用|
 |:---:|:---:|
 |`-a `|显示所有的容器，包括未运行的|
