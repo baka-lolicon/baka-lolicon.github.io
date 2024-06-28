@@ -30,6 +30,7 @@ hello-world   latest    d2c94e258dcb   14 months ago   13.3kB
 ```
 
 其中每个字段含义如下
+
 |字段|含义|
 |:---:|:---:|
 |REPOSITORY|镜像的仓库名或者来源|
@@ -112,6 +113,7 @@ CONTAINER ID   IMAGE           COMMAND                  CREATED         STATUS  
 c13a973494d0   ubuntu:latest   "/bin/bash"              2 hours ago     Up 29 minutes                                             musing_sutherland
 ```
 其中每个字段含义如下
+
 |字段|含义|
 |:---:|:---:|
 |CONTAINER ID|容器的ID，唯一标识符|
