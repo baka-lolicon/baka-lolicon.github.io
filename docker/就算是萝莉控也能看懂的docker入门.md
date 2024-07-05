@@ -49,9 +49,11 @@ docker rmi $image_name
 1. **创建容器**
 
 创建容器基本命令如下，`$OPTIONS`表示*docker run命令的选项*；`$COMMAND`表示*在容器中执行的命令*；`$ARG`表示*容器中执行命令跟的选项*
+
 ```shell
 docker run $OPTIONS IMAGE $COMMAND $ARG...
 ```
+
 |选项|作用|案例|
 |:---:|:---:|:---:|
 |`-d, --detach`|使容器开启后在后台运行|`docker run -d nginx`|

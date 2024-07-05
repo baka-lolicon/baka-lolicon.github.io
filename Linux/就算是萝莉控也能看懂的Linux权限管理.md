@@ -1,9 +1,19 @@
 # 就算是萝莉控也能看懂的Linux权限管理
-
-## 用户及组操作
-### passwd
-### usermod
-### useradd
-### userdel
-### groupadd
-### groupdel
+## 文件权限
+### 基本文件权限
+#### 基本文件权限介绍
+#### 基本文件权限命令
+- chmod
+- chown
+- chgrp
+## 用户及组权限
+### 特权提升
+- sudo
+- su
+### 用户及组操作
+- passwd
+- usermod
+- useradd
+- userdel
+- groupadd
+- groupdel
