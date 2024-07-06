@@ -225,3 +225,6 @@ dr-x------  2 root root 0 Jul  1 16:53 fd
     lrwx------ 1 root root 64 Jul  1 18:04 2 -> /dev/pts/2
     lrwx------ 1 root root 64 Jul  1 18:04 4 -> /dev/ptmx
     ```
+
+
+<script src="../js/menu.js"></script>

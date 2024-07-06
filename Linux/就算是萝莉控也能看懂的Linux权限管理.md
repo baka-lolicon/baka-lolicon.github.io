@@ -333,3 +333,6 @@ Linux 系统中 root 用户拥有系统中的最高权限，可以执行任何�
   groupdel mygo # 删除名为 mygo 的用户组
   groupdel -f mygo # 强制删除名为 mygo 的用户组，即使该组仍有成员
   ```
+
+
+<script src="../js/menu.js"></script>

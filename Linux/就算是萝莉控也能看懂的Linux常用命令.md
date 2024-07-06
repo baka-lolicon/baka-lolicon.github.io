@@ -175,3 +175,5 @@ drwxr-xr-x   2 root root    4096 Dec  7  2021 boot
   ```shell
   ip route add default via 网关IP dev 网卡名
   ```
+
+<script src="../js/menu.js"></script>

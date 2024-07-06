@@ -72,3 +72,5 @@
   ```shell
   unset http_proxy #删除http_proxy变量（取消该shell的代理）
   ```
+
+  <script src="../js/menu.js"></script>
