@@ -146,3 +146,6 @@ docker exec -it <$container_id or $container_name> /bin/bash #进入该容器终
 ```shell
 docker exec <$container_id or $container_name> ls / #查看根目录内容
 ```
+
+
+<script src="../js/menu.js"></script>
