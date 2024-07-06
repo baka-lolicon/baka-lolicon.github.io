@@ -3,42 +3,42 @@
 ## 文件类型
 
 在Linux中文件类型共有7中
-- \- 普通文件
+- `-` 普通文件
   - 普通文件是最常见的文件类型，包括文本文件、二进制可执行文件、图像文件等。
   - 在 ls -l 输出中，普通文件的标识符是 `-`。
   - 例如`/etc/passwd`
     ```shell
     -rw-r--r-- 1 root root 1.2K Nov 18  2023 /etc/passwd
     ```
-- d 目录文件 directory
+- `d` 目录文件 directory
   - 目录文件，用于存储其他文件和目录的列表。
   - 在 ls -l 输出中，普通文件的标识符是 `d`。
   - 例如`/usr`
     ```shell
     drwxr-xr-x  10 root root 4.0K Jun 21 02:23 usr
     ```
-- l 符号链接文件 link
+- `l` 符号链接文件 link
   - 符号链接文件，链接到其他文件或文件夹，相当于Windows中的快捷方式
   - 在 ls -l 输出中，普通文件的标识符是 `l`。
   - 例如`/bin`
     ```shell
     lrwxrwxrwx   1 root root    7 Apr  8 02:02 bin -> usr/bin
     ```
-- b 块设备 block
+- `b` 块设备 block
   - 用于访问计算机的硬件设备或虚拟设备。块设备适合随机访问设备
   - 在 ls -l 输出中，普通文件的标识符是 `b`。
   - 例如`/dev/sda`
     ```shell
     brw-rw---- 1 root disk   8,   0 Jul  1 16:13 sda
     ```
-- c 字符设备 character
+- `c` 字符设备 character
   - 用于访问计算机的硬件设备或虚拟设备。字符设备适合顺序访问设备
   - 在 ls -l 输出中，普通文件的标识符是 `c`。
   - 例如`/dev/null`
     ```shell
     crw-rw-rw- 1 root root   1,   3 Jul  1 16:13 null
     ```
-- p 管道文件 pipe
+- `p` 管道文件 pipe
   - 管道文件用于进程间通信,使用mififo命令创建，一端输入另一端输出
   - 在 ls -l 输出中，普通文件的标识符是 `p`。
   - 例如我创建`/tmp/hello`文件
@@ -65,7 +65,7 @@
     ╭─root@kamiw /tmp
     ╰─#
     ```
-- s 套接字文件 socket
+- `s` 套接字文件 socket
   - 套接字文件用于进程间的通信。
   - 在 ls -l 输出中，普通文件的标识符是 `s`。
   - 例如`/run/docker.sock`
