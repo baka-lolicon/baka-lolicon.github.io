@@ -227,4 +227,4 @@ dr-x------  2 root root 0 Jul  1 16:53 fd
     ```
 
 
-<script src="../js/menu.js"></script>
+<script src="/js/menu.js"></script>

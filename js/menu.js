@@ -1,19 +1,37 @@
+const backgroundNames = ['Flandre.png', 'Reimu.png', 'Marisa.png'];
+function getRandomBackgroundName(namesArray) {
+  return namesArray[Math.floor(Math.random() * namesArray.length)];
+}
+
 let sidebar = document.createElement('div');
 sidebar.className = 'sidebar';
 sidebar.id = 'sidebar';
 
-let button = document.createElement('button');
-button.id = 'sidebtn';
-button.className = 'toggle-btn';
-button.textContent = '☰';
-button.onclick = toggleSidebar;
 
-sidebar.appendChild(button);
+if (window.innerWidth <= 600) {
+  let button = document.createElement('button');
+  button.id = 'sidebtn';
+  button.className = 'toggle-btn';
+  button.textContent = '☰';
+  button.onclick = toggleSidebar;
+  document.body.appendChild(button);
+}
+else {
+  let divElement = document.createElement('div');
+  divElement.id = 'backTop';
+  divElement.style.cursor = 'pointer';
+
+  let backgroundName = getRandomBackgroundName(backgroundNames);
+  divElement.style.background = `url(/img/menu/${backgroundName}) no-repeat`;
+  divElement.onclick = toggleSidebar;
+  document.body.appendChild(divElement);
+}
 
 document.body.appendChild(sidebar);
 
 let style = document.createElement('style');
 style.textContent = `
+
   .sidebar {
       width: 300px;
       height: 100%;
@@ -25,6 +43,18 @@ style.textContent = `
       overflow-x: hidden;
       padding-top: 20px;
       transition: left 0.5s ease;
+  }
+
+  #backTop {
+      opacity: 1;
+      position: fixed;
+      z-index: 9999;
+      bottom: 0;
+      right: 0;
+      height: 278px;
+      display: block;
+      width: 130px;
+      cursor: pointer;
   }
 
   .toggle-btn {
@@ -84,13 +114,7 @@ window.addEventListener('load', function () {
     let processedString = input.toLowerCase();
     processedString = processedString.replace(/[^a-z\u4e00-\u9fa5]/g, '');
     return processedString;
-}
-
-// 示例用法
-let inputString = "Hello, 你好！This is a Test.";
-let processedResult = processString(inputString);
-console.log(processedResult); // 输出：hello你好thisisatest
-
+  }
 
   let headings = document.querySelectorAll('h1, h2, h3, h4');
 
@@ -127,15 +151,10 @@ console.log(processedResult); // 输出：hello你好thisisatest
     return ul;
   }
 
-
-  headings.forEach(heading => {
-    console.log(heading.tagName + ': ' + heading.textContent);
-  });
   let nestedList = generateNestedList(headings, 0);
 
   let sidebox = document.getElementById("sidebar");
   sidebox.appendChild(nestedList);
-
 });
 
 

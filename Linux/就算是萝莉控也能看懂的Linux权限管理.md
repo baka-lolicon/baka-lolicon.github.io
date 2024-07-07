@@ -335,4 +335,4 @@ Linux 系统中 root 用户拥有系统中的最高权限，可以执行任何�
   ```
 
 
-<script src="../js/menu.js"></script>
+<script src="/js/menu.js"></script>
