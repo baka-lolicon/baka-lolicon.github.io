@@ -6,14 +6,14 @@
 ## docker的基本命令
 ### 镜像基本命令
 ***官方文档镜像部分：[docker-docs-image](https://docs.docker.com/reference/cli/docker/image/)***
-1. **拉取镜像**
+#### **拉取镜像**
 
 使用以下命令拉取镜像
 ```shell
 docker pull $image_name
 ```
 
-2. **查看本地镜像**
+#### **查看本地镜像**
 
 使用以下命令查看本地镜像
 ```shell
@@ -38,7 +38,7 @@ hello-world   latest    d2c94e258dcb   14 months ago   13.3kB
 |CREATED|镜像创建的时间|
 |SIZE|镜像占用的磁盘空间大小|
 
-3. **删除镜像**
+#### **删除镜像**
 
 使用以下命令删除本地镜像
 ```shell
@@ -46,7 +46,7 @@ docker rmi $image_name
 ```
 ### 容器基本命令
 ***官方文档容器部分：[docker-docs-container](https://docs.docker.com/reference/cli/docker/container/)***
-1. **创建容器**
+#### **创建容器**
 
 创建容器基本命令如下，`$OPTIONS`表示*docker run命令的选项*；`$COMMAND`表示*在容器中执行的命令*；`$ARG`表示*容器中执行命令跟的选项*
 
@@ -64,7 +64,7 @@ docker run $OPTIONS IMAGE $COMMAND $ARG...
 |`-P`|将主机随机端口映射到容器中|`docker run -P nginx`|
 
 
-2. **容器简单操作**
+#### **容器简单操作**
 
 *以下命令执行成功后会返回 容器ID `$container_id`*
 
@@ -99,7 +99,7 @@ docker stats <$container_id or $container_name>
 docker rename <$container_id or $container_name>
 ```
 
-3. **查看本地容器**
+#### **查看本地容器**
 
 使用以下命令查看运行中的容器
 ```shell
@@ -133,7 +133,7 @@ c13a973494d0   ubuntu:latest   "/bin/bash"              2 hours ago     Up 29 mi
 |`-q`|仅输出容器ID|
 |`-s` |显示容器总的文件占用磁盘大小|
 
-4. **在运行的容器内执行命令**
+#### **在运行的容器内执行命令**
 
 该命令格式基本同创建容器基本命令如下，`$OPTIONS`表示*docker exec命令的选项*；`$COMMAND`表示*在容器中执行的命令*；`$ARG`表示*容器中执行命令跟的选项*
 ```shell
