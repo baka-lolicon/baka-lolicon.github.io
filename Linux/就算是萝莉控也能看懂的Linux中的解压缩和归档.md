@@ -149,7 +149,7 @@ zstd [选项] $filename
 	|`-d`	|从压缩文件中删除指定文件|	`zip -d archive.zip file.txt`
 	|`-m`	|将文件移入压缩文件后删除原始文件	|`zip -m archive.zip file.txt`
 	|`-v`|	显示详细的压缩信息	|`zip -v archive.zip file.txt`
-	|`-q`	|静默模式，减少输出信息|`	zip -q archive.zip file.txt`
+	|`-q`	|静默模式，减少输出信息|`zip -q archive.zip file.txt`
 	|`-j`|	仅存储文件，不包含目录结构|	`zip -j archive.zip dir/file.txt`
   |`-P`|为压缩包设置密码，选项后跟密码|`zip -P password archive.zip file.txt`
 
@@ -168,11 +168,11 @@ zstd [选项] $filename
   |选项|	功能|	示例|
   |:---:|:---:|:---:|
   |`-l`	|列出压缩文件中的内容列表,不解压|	`unzip -l archive.zip`
-	|`-d`	|将文件解压到指定目录|	`unzip archive.zip -d des_dir/`
-	|`-u`	|仅更新不存在或较旧的文件|`	unzip -u archive.zip`
-	|`-v`	|显示详细的解压信息|	`unzip -v archive.zip`
-	|`-q`	|静默模式，减少输出信息|`	unzip -q archive.zip`
-	|`-P`|	提供密码以解密压缩文件|`	unzip -P password archive.zip`
+	|`-d`	|将文件解压到指定目录|`unzip archive.zip -d des_dir/`
+	|`-u`	|仅更新不存在或较旧的文件|`unzip -u archive.zip`
+	|`-v`	|显示详细的解压信息|`unzip -v archive.zip`
+	|`-q`	|静默模式，减少输出信息|`unzip -q archive.zip`
+	|`-P`|	提供密码以解密压缩文件|`unzip -P password archive.zip`
 
 #### `.rar`
 - 压缩
@@ -188,7 +188,7 @@ zstd [选项] $filename
 
   |标识符|	作用|	示例|
   |:---:|:---:|:---:|
-  |`a`|	添加文件到压缩文件中,不存在则创建压缩文件|`	rar a archive.rar file.txt`
+  |`a`|	添加文件到压缩文件中,不存在则创建压缩文件|`rar a archive.rar file.txt`
   |`d`|	从压缩文件中删除文件|	`rar d archive.rar file.txt`
   |`t`|	测试压缩文件的完整性|	`rar t archive.rar`
   |`u`|	更新已存在的压缩文件|	`rar u archive.rar newfile.txt`
@@ -200,7 +200,7 @@ zstd [选项] $filename
   |:---:|:---:|:---:|
   |`-p`	|设置压缩文件的密码	|`rar a -pYourPassword archive.rar file.txt`
   |`-m5	`|使用最大压缩率（较慢）|	`rar a -m5 archive.rar file.txt`
-  |`-hp`	|设置加密头部密码|`	rar a -hpYourHeaderPassword archive.rar file.txt`
+  |`-hp`	|设置加密头部密码|`rar a -hpYourHeaderPassword archive.rar file.txt`
 
   - 解压
   
@@ -239,8 +239,8 @@ zstd [选项] $filename
 
   |选项|	作用|	示例|
   |:---:|:---:|:---:|
-  |`-p`|	设置压缩文件的密码|`	7z a -pYourPassword archive.7z file.txt`
-  |`-mx`|	设置压缩级别（1-9，9最高）	|`7z a -mx=9 archive.7z dir/`
+  |`-p`|	设置压缩文件的密码|`7z a -pYourPassword archive.7z file.txt`
+  |`-mx`|设置压缩级别（1-9，9最高）(不使用仅为归档不压缩)|`7z a -mx=9 archive.7z dir/`
   |`-r`|	递归地处理子目录及其文件	|`7z a -r archive.7z dir/`
   |`-t`	|指定归档类型,`7z、xz、zip、gzip、bzip2、tar`可选|`7z a -tzip archive.zip file.txt`
 
@@ -254,10 +254,10 @@ zstd [选项] $filename
   |选项|	作用|	示例|
   |:---:|:---:|:---:|
   |`-p	`|指定压缩文件的密码	|`7z x -pYourPassword archive.7z`
-  |`-o`|	指定解压缩的目标目录|`	7z x archive.7z -o/path/to/test`
+  |`-o`|	指定解压缩的目标目录|`7z x archive.7z -o/path/to/test`
   |`-r	`|递归地处理子目录及其文件|	`7z x -r archive.7z`
   |`-aos`|	覆盖所有现有文件	|`7z x archive.7z -aos`
-  |`-y`|	自动同意所有提示|`	7z x archive.7z -y`
+  |`-y`|	自动同意所有提示|`7z x archive.7z -y`
 
 ## 归档
 **归档**：将多个文件或目录*合并为一个单一文件*
