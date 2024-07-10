@@ -112,7 +112,7 @@ document.head.appendChild(style);
 window.addEventListener('load', function () {
   function processString(input) {
     let processedString = input.toLowerCase();
-    processedString = processedString.replace(/[^a-z\u4e00-\u9fa5]/g, '');
+    processedString = processedString.replace(/[^a-z0-9\u4e00-\u9fa5]/g, '');
     return processedString;
   }
 
