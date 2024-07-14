@@ -28,6 +28,59 @@
   
   C Shell的增强版本，增加了命令行编辑和命令补全功能。作为现代某些BSD系统的默认Shell，如FreeBSD、NetBSD
 
+## 更换 Shell
+### 如何查看当前使用的 Shell
+查看当前使用的 Shell 可以使用环境变量`$Shell`
+```shell
+echo $Shell
+```
+这将输出当前用户登录所使用的 Shell 的路径
+```shell
+/bin/bash
+```
+也可以直接在[`/etc/passwd`](/就算是萝莉控也能看懂的Linux常用配置文件.md#etcpasswd)文件夹中查看
+### 如何查看系统中可用的 Shell
+系统中可用的合法登录 Shell 都会将其路径以文本的形式存储在`/etc/shells`中
+```shell
+╭─root@kamiw /mnt/d
+╰─# cat /etc/shells
+# Pathnames of valid login shells.
+# See shells(5) for details.
+
+/bin/sh
+/bin/bash
+/bin/rbash
+/usr/bin/rbash
+/bin/zsh
+/usr/bin/zsh
+/usr/bin/git-shell
+/usr/bin/bash
+/usr/bin/sh
+/bin/ksh
+/usr/bin/ksh
+```
+可在其中查看安装了哪些 Shell，如果不存在则需要去[安装](/就算是萝莉控也能看懂的Linux软件管理.md)
+### 如何更换 Shell
+更换 Shell 通常使用到`chsh`命令
+- `chsh`
+  
+  用于更改用户的默认登录 Shell
+
+  使用方法：`chsh`
+  ```shell
+  ╭─root@kamiw /mnt/d
+  ╰─# chsh
+  Changing shell for root.
+  New shell [/usr/bin/zsh]: 
+  ```
+  直接使用`chsh`命令后会进行交互，显示当前使用 Shell 并让你输入新的登录 Shell 路径
+
+  常用选项：`-s` 指定新的登录 Shell  
+  使用方法：`chsh -s Shell路径`
+  ```shell
+  chsh -s /bin/zsh #将登录Shell改为zsh
+  ```
+当然，也可以直接在[`/etc/passwd`](/就算是萝莉控也能看懂的Linux常用配置文件.md#etcpasswd)文件中修改某个用户的登录 Shell
 
 ## 终端中Shell的基本操作
 ### 快捷键
@@ -53,6 +106,12 @@
 - $0：当前执行的命令或脚本的名称，在Shell中直接使用`echo`输出得到的是当前使用Shell
 - $?：上一个命令的退出状态或返回值。用于检查上一个命令是否成功执行（返回值为0）或者失败（非0返回值）
 - $!：后台运行的最后一个进程的PID（进程ID）
+- $http_proxy：指定 HTTP 代理服务器的地址
+- $https_proxy：指定 HTTPS 代理服务器的地址
+- $no_proxy：指定不需要通过代理的地址列表
+- $all_proxy：指定所有协议的代理服务器的地址
+- $http_proxy_user：指定 HTTP 代理的用户名
+- $http_proxy_pass：指定 HTTP 代理的密码
 
 ## 常用特殊符号
 ### `|`
