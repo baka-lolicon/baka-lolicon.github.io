@@ -4,5 +4,4 @@
 ## `/etc/group`
 ## `/etc/hosts`
 ## `/etc/fstab`
-## `/etc/sudoers`
 ## `/etc/resolv.conf`
