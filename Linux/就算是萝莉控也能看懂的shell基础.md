@@ -38,7 +38,7 @@ echo $Shell
 ```shell
 /bin/bash
 ```
-也可以直接在[`/etc/passwd`](/就算是萝莉控也能看懂的Linux常用配置文件.md#etcpasswd)文件夹中查看
+也可以直接在[`/etc/passwd`](/Linux/就算是萝莉控也能看懂的Linux身份管理文件.md#etcpasswd)文件夹中查看
 ### 如何查看系统中可用的 Shell
 系统中可用的合法登录 Shell 都会将其路径以文本的形式存储在`/etc/shells`中
 ```shell
@@ -80,7 +80,7 @@ echo $Shell
   ```shell
   chsh -s /bin/zsh #将登录Shell改为zsh
   ```
-当然，也可以直接在[`/etc/passwd`](/就算是萝莉控也能看懂的Linux常用配置文件.md#etcpasswd)文件中修改某个用户的登录 Shell
+当然，也可以直接在[`/etc/passwd`](/Linux/就算是萝莉控也能看懂的Linux身份管理文件.md#etcpasswd)文件中修改某个用户的登录 Shell
 
 ## 终端中Shell的基本操作
 ### 快捷键
