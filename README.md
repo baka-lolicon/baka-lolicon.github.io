@@ -11,3 +11,6 @@
 #### [就算是萝莉控也能看懂的shell美化](/Linux/就算是萝莉控也能看懂的shell美化.md)
 #### [就算是萝莉控也能看懂的Linux身份管理文件](/Linux/就算是萝莉控也能看懂的Linux身份管理文件.md)
 #### [就算是萝莉控也能看懂的shell脚本编写](/Linux/就算是萝莉控也能看懂的shell脚本编写.md)
+## database
+### relational
+#### [就算是萝莉控也能看懂的基本SQL编写](/database/relational/就算是萝莉控也能看懂的基本SQL编写.md)
