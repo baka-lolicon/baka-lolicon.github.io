@@ -162,6 +162,13 @@ echo $Shell
   ```shell
   echo 'hello world' > file.txt #将 "hello world" 字符串重定向到名为 file.txt 的文件中，如果该文件不存在则创建，如果存在则会覆盖原有内容。
   ```
+  使用重定向符将数据丢弃
+  ```shell
+  command > /dev/null #丢弃标准输出
+  command 2> /dev/null #丢弃标准错误输出
+  command > /dev/null 2>&1 #丢弃标准输出和标准错误输出，最常用的为该方法
+  ```
+
 - `>>` 重定向追加，将命令的输出追加到文件末尾
   ```shell
   echo 'hello world' >> file.txt #将字符串 "hello world" 追加到名为 file.txt 的文件末尾
